@@ -14,7 +14,7 @@
         <div class="container py-5 h-100">
             <div class="row d-flex align-items-center justify-content-center h-100">
                 <div class="col-md-8 col-lg-7 col-xl-6">
-                    <img src="resources/login_img.svg" class="img-fluid" alt="Login Image">
+                    <img src="resources/img/scope-img.jpg" class="img-fluid" alt="Login Image">
                 </div>
                 <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
                     <h1 class="mb-3">Sign in</h1>
@@ -39,11 +39,11 @@
 
                         <!-- Email input -->
                         <div class="form-floating mb-3">
-                            <input type="email" class="form-control rounded-3" id="loginEmail" name="email"
+                            <input type="text" class="form-control rounded-3" id="username" name="username"
                                 placeholder="name@example.com" required>
-                            <label for="loginEmail">Email address</label>
-                            @if ($errors->has('email'))
-                                <span class="text text-danger">{{ $errors->first('email') }}</span>
+                            <label for="userName">Username</label>
+                            @if ($errors->has('username'))
+                                <span class="text text-danger">{{ $errors->first('username') }}</span>
                             @endif
                         </div>
 
