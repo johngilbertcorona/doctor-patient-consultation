@@ -13,16 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('patients', function (Blueprint $table) {
             $table->id();
-            $table->string('fname')->nullable();
-            $table->string('lname')->nullable();
-            $table->date('birthday')->nullable();
-            $table->boolean('gender')->nullable();
-            $table->string('username');
-            $table->boolean('role');
-            $table->string('email')->unique();
-            $table->string('password');
+            $table->integer('patient_id');
+            $table->string('med_history')->nullable();
+            $table->boolean('is_online');
+            $table->time('app_time');
+            $table->date('app_date');
+            $table->string('app_status');
             $table->timestamps();
         });
     }
@@ -34,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('patients');
     }
 };
