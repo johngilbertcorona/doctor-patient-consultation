@@ -16,11 +16,13 @@ return new class extends Migration
         Schema::create('patients', function (Blueprint $table) {
             $table->id();
             $table->foreignId('patient_id');
+            $table->foreignId('doctor_id')->nullable();
+            $table->string('has_appointment')->default('0')->comment('0 if none otherwise 1 if has appointment');
             $table->string('med_history')->nullable();
-            $table->boolean('is_online')->comment('1 if online appointment, 2 if physical appointment');
+            $table->boolean('is_online')->comment('0 if online appointment, 1 if physical appointment');
             $table->time('app_time')->comment('appointment time');
             $table->date('app_date')->comment('appointment date');
-            $table->boolean('app_status')->comment('1 if approved, 2 if not approved');
+            $table->boolean('app_status')->default('0')->comment('0 if  not approved, 1 if not approved');
             $table->timestamps();
         });
     }

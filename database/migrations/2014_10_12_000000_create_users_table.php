@@ -23,7 +23,7 @@ return new class extends Migration
             $table->date('birthday')->nullable();
             $table->boolean('gender')->nullable();
             $table->string('specialization')->nullable()->comment('specialization for doctor role');
-            $table->boolean('role')->default('1')->comment('1 for patient, 2 for doctor, 0 for administrator');
+            $table->string('role')->default('patient')->comment('patient, doctor, or admin');
 
             $table->timestamps();
         });
