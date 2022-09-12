@@ -22,24 +22,24 @@ class UserController extends Controller
             'role'          => ['required'],
         ]);
 
-        $credentials = $request->only('username', 'password');
+        $credentials = $request->only('username', 'password', 'role');
 
         if (Auth::attempt($credentials)) {
 
             if ($request->role == '1') {
 
                 // Successful login for doctor
-                return redirect('patient');
+                return redirect('patient/dashboard');
             } elseif ($request->role == '2') {
 
                 // Successful login for patient
-                return redirect('doctor');
+                return redirect('doctor/dashboard');
             }
-            return redirect('admin');
+            return redirect('admin/dashboard');
         }
 
         // Failed login Authentication
-        return redirect('dashboard')->with('info-danger', 'Login details are not valid');
+        return redirect('login')->with('message', 'username or password does not match our records');
     }
 
     // Logout Logic ----------------------------------------------

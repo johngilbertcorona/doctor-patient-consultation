@@ -38,6 +38,7 @@
         <input type="text" name="role" value="1"><br>
         <input type="submit">
     </form>
+    </form>
 </body>
 
 </html>

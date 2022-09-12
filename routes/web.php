@@ -15,21 +15,16 @@ use App\Http\Controllers\PatientController;
 |
 */
 
-Route::get('doctor', function () {
-    // if (auth()->user()->role == '1') {
-    //     return view('patientdashboard');
-    // } elseif (auth()->user()->role == '2') {
-    //     return view('doctordashboard');
-    // }
-    return view('doctor');
+Route::get('doctor/dashboard', function () {
+    return view('doctor/dashboard');
 });
 
-Route::get('admin', function () {
-    return view('admin');
+Route::get('admin/dashboard', function () {
+    return view('admin/dashboard');
 });
 
-Route::get('patient', function () {
-    return view('patient');
+Route::get('patient/dashboard', function () {
+    return view('patient/dashboard');
 });
 
 
