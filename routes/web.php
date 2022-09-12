@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\PatientController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +15,34 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('doctor-login');
+Route::get('doctor', function () {
+    // if (auth()->user()->role == '1') {
+    //     return view('patientdashboard');
+    // } elseif (auth()->user()->role == '2') {
+    //     return view('doctordashboard');
+    // }
+    return view('doctor');
+});
+
+Route::get('admin', function () {
+    return view('admin');
+});
+
+Route::get('patient', function () {
+    return view('patient');
+});
+
+
+Route::get('register', function () {
+    return view('register');
+});
+
+Route::get('login', function () {
+    return view('login');
+});
+
+Route::controller(UserController::class)->group(function () {
+    Route::post('register', 'validate_registration');
+    Route::post('login', 'validate_login');
+    Route::get('logout', 'logoutUser')->name('logout');
 });

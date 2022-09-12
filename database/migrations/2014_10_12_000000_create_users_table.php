@@ -17,12 +17,13 @@ return new class extends Migration
             $table->id();
             $table->string('fname')->nullable();
             $table->string('lname')->nullable();
+            $table->string('email')->unique();
+            $table->string('password');
             $table->date('birthday')->nullable();
             $table->boolean('gender')->nullable();
             $table->string('username');
-            $table->boolean('role');
-            $table->string('email')->unique();
-            $table->string('password');
+            $table->boolean('role')->default('1')->comment('1 for patient, 2 for doctor, 3 for administrator');
+            
             $table->timestamps();
         });
     }
