@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('patients', function (Blueprint $table) {
             $table->id();
-            $table->integer('patient_id');
+            $table->foreignId('patient_id');
             $table->string('med_history')->nullable();
             $table->boolean('is_online')->comment('1 if online appointment, 2 if physical appointment');
             $table->time('app_time')->comment('appointment time');
