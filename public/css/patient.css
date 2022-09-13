@@ -1,96 +1,244 @@
 .container-fluid{
-    margin-left: 290px;
-    margin-right: 290px;
-    padding: 5px;
-    
+  margin-left: 290px;
+  margin-right: 290px;
+  padding: 5px;
+  
 }
 .nav-item{
-    font-family: "Poppins" sans-serif;
-    margin-left: 20px;
+  font-family: "Poppins" sans-serif;
+  margin-left: 20px;
 }
 .nav-link{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 0 10px 30px;
-    font-family: "Raleway", sans-serif;
-    font-size: 15px;
-    font-weight: 500;
-    color: #111111;
-    white-space: nowrap;
-    transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0 10px 30px;
+  font-family: "Raleway", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: #111111;
+  white-space: nowrap;
+  transition: 0.3s;
 }
 .btn.btn-primary{
-    margin-left: 10px;
-    background: #e03a3c;
-    color: #fff;
-    border-radius: 4px;
-    border: none;
-    padding: 8px 25px;
-    width: 100px;
-    white-space: nowrap;
-    transition: 0.3s;
-    font-size: 14px;
-    font-weight: 600;
-    display: inline-block;
+  margin-left: 10px;
+  background: #e03a3c;
+  color: #fff;
+  border-radius: 4px;
+  border: none;
+  padding: 8px 25px;
+  width: 100px;
+  white-space: nowrap;
+  transition: 0.3s;
+  font-size: 14px;
+  font-weight: 600;
+  display: inline-block;
 }
 .btn.btn-primary:hover{
-    background-color: #aa1b1d;
+  background-color: #aa1b1d;
 }
 
-#hero {
-    width: 100%;
-    height: 100vh;
-    background: url("young-doctor-supporting-his-patient\ 1.png") top right no-repeat;
-    background-size: cover;
-    position: relative;
-    padding-top: 82px;
-  }
 
-  .col-xl-6{
-    margin-bottom: 80px;
-  }
-  
-  #hero:before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    top: 0;
-    left: 0;
-    right: 0;
-  }
-  
-  #hero h1 {
-    margin: 0;
-    font-size: 48px;
-    font-weight: 600;
-    color: #fff;
-  }
-  
-  #hero h2 {
-    color: #fff;
-    margin: 10px 0 0 0;
-    font-size: 24px;
-  }
-  
-  #hero .btn-get-started {
-    font-family: "Raleway", sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    letter-spacing: 1px;
-    display: inline-block;
-    padding: 10px 30px;
-    border-radius: 4px;
-    transition: 0.5s;
-    margin-top: 30px;
-    color: #fff;
-    background: #e03a3c;
-    border: 2px solid #e03a3c;
-    cursor: pointer;
-  }
-  
-.btn-get-started:hover {
-    background: transparent;
-    border-color: #fff;
-  }
-  
+#hero {
+width: 100%;
+height: 75vh;
+background: url("young-doctor-supporting-his-patient.jpg") top left;
+background-size: cover;
+position: relative;
+}
+
+#hero:before {
+content: "";
+background: rgba(37, 37, 37, 0.295);
+position: absolute;
+bottom: 0;
+top: 0;
+left: 0;
+right: 0;
+}
+
+#hero .container {
+position: relative;
+}
+
+#hero h1 {
+margin: 0;
+font-size: 48px;
+font-weight: 700;
+line-height: 56px;
+color: #f3f3f3;
+font-family: "Poppins", sans-serif;
+}
+
+#hero h1 span {
+color: #ffffff;
+}
+
+#hero h2 {
+color: #ffffff;
+margin: 5px 0 30px 0;
+font-size: 24px;
+font-weight: 400;
+}
+
+#hero .btn-get-started {
+font-family: "Roboto", sans-serif;
+text-transform: uppercase;
+font-weight: 500;
+font-size: 14px;
+letter-spacing: 1px;
+display: inline-block;
+padding: 10px 28px;
+border-radius: 4px;
+transition: 0.5s;
+color: #fff;
+background: #e03a3c;
+text-decoration: none;
+}
+
+#hero .btn-get-started:hover {
+background: #aa1b1d;
+text-decoration: none;
+}
+
+#hero .btn-watch-video {
+font-size: 16px;
+transition: 0.5s;
+margin-left: 25px;
+color: #222222;
+font-weight: 600;
+display: flex;
+align-items: center;
+}
+
+#hero .btn-watch-video i {
+color: #106eea;
+font-size: 32px;
+transition: 0.3s;
+line-height: 0;
+margin-right: 8px;
+}
+
+#hero .btn-watch-video:hover {
+color: #106eea;
+}
+
+#hero .btn-watch-video:hover i {
+color: #3b8af2;
+}
+
+@media (min-width: 1024px) {
+#hero {
+  background-attachment: fixed;
+}
+}
+
+@media (max-width: 768px) {
+#hero {
+  height: 100vh;
+}
+
+#hero h1 {
+  font-size: 28px;
+  line-height: 36px;
+}
+
+#hero h2 {
+  font-size: 18px;
+  line-height: 24px;
+  margin-bottom: 30px;
+}
+
+#hero .btn-get-started,
+#hero .btn-watch-video {
+  font-size: 13px;
+}
+}
+
+@media (max-height: 500px) {
+#hero {
+  height: 120vh;
+}
+}
+
+
+
+.featured-services .icon-box {
+padding: 30px;
+position: relative;
+overflow: hidden;
+background: #fff;
+box-shadow: 0 0 29px 0 rgba(68, 88, 144, 0.12);
+transition: all 0.3s ease-in-out;
+border-radius: 8px;
+z-index: 1;
+}
+
+.featured-services{
+padding-top: 80px;
+padding-bottom: 100px;
+background-color: #f5f5f5;
+}
+.services{
+text-align: center;
+font-size: 40px;
+padding-bottom: 10px;
+}
+.service-content{
+text-align: center;
+width: 100%;
+padding-bottom: 30px;
+}
+.featured-services .icon-box::before {
+content: "";
+position: absolute;
+background: #e03a3c;
+right: 0;
+left: 0;
+bottom: 0;
+top: 100%;
+transition: all 0.3s;
+z-index: -1;
+}
+
+.featured-services .icon-box:hover::before {
+background: #e03a3c;
+top: 0;
+border-radius: 0px;
+}
+
+.featured-services .icon {
+margin-bottom: 15px;
+}
+
+.featured-services .icon i {
+font-size: 48px;
+line-height: 1;
+color: #e03a3c;
+transition: all 0.3s ease-in-out;
+}
+
+.featured-services .title {
+font-weight: 700;
+margin-bottom: 15px;
+font-size: 18px;
+}
+
+.featured-services .title a {
+color: #111;
+}
+
+.featured-services .description {
+font-size: 15px;
+line-height: 28px;
+margin-bottom: 0;
+}
+
+.featured-services .icon-box:hover .title a,
+.featured-services .icon-box:hover .description {
+color: #fff;
+}
+
+.featured-services .icon-box:hover .icon i {
+color: #fff;
+}
