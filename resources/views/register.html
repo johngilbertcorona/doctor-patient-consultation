@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Register</title>
+  <link rel="stylesheet" href="register.css">
+  <script src="scripts.js"></script>
+</head>
+<body>
+
+	
+<div class="form-wrap">
+		<div class="tabs">
+			<h3 class="signup-tab"><a class="active" href="#signup-tab-content">Patient</a></h3>
+			<h3 class="login-tab"><a href="#Doctor-tab-content">Doctor</a></h3>
+		</div><!--.tabs-->
+
+		<div class="tabs-content">
+			<div id="signup-tab-content" class="active">
+				<form class="signup-form" action="" method="post">
+					<input type="text" class="input" id="first_name" autocomplete="off" placeholder="Firsname">
+					<input type="text" class="input" id="last_name" autocomplete="off" placeholder="Lastname">
+					<input type="email" class="input" id="user_email" autocomplete="off" placeholder="Email">
+					<input type="text" class="input" id="user_name" autocomplete="off" placeholder="Username">
+					<input type="password" class="input" id="user_pass" autocomplete="off" placeholder="Password">
+					<input type="submit" class="button" value="Sign Up">
+				</form><!--.login-form-->
+				<div class="help-text">
+					<p>By signing up, you agree to our</p>
+					<p><a href="#">Terms of service</a></p>
+				</div><!--.help-text-->
+			</div><!--.signup-tab-content-->
+
+			<div id="Doctor-tab-content">
+				<form class="signup-form" action="" method="post">
+					<input type="text" class="input" id="first_name" autocomplete="off" placeholder="Firsname">
+					<input type="text" class="input" id="last_name" autocomplete="off" placeholder="Lastname">
+					<input type="email" class="input" id="user_email" autocomplete="off" placeholder="Email">
+					<input type="text" class="input" id="user_name" autocomplete="off" placeholder="Username">
+					<input type="password" class="input" id="user_pass" autocomplete="off" placeholder="Password">
+					<input type="submit" class="button" value="Sign Up">
+				<div class="help-text">
+					<div class="help-text">
+						<p>By signing up, you agree to our</p>
+						<p><a href="#">Terms of service</a></p>
+					</div>
+				</div><!--.help-text-->
+			</div><!--.login-tab-content-->
+		</div><!--.tabs-content-->
+	</div><!--.form-wrap-->
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
